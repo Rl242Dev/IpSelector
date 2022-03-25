@@ -1,22 +1,19 @@
-import mysql.connector
+import mysql.connector # pip install mysql-connector-python
 
-IpAvailable = ['Gabin', 'Loan', 'Theo', 'Lucien', 'Timeo']
+IpAvailable = ['***', '***', '***', '****', '****'] # Since your gonna search by the name the ips you have, put the names you have in here
 
 db = mysql.connector.connect(host='localhost',
-                             database='IpData',
-                             user='rl242',
-                             password='31#Nigi2'
+                             database='******', # Your Database Name
+                             user='rl242', # The user who created the database, can be root
+                             password='******' # The password
                              )
 
 mycursor = db.cursor()
 
-sql = "INSERT INTO IpList (name, ip) VALUES (%s, %s)"
+sql = "INSERT INTO ** (column_1, column_2) VALUES (%s, %s)"
 val = [
-  ('Gabin', '90.66.86.54'),
-  ('Loan', '31.36.137.199'),
-  ('Theo', '86.207.6.135'),
-  ('Lucien', '86.202.140.97'),
-  ('Timeo', '36.31.176.47'),
+  ('****', '***'),
+  ('****', '***'),
 ]
 
 mycursor.executemany(sql, val)
