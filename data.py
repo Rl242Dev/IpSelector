@@ -11,7 +11,7 @@ db = mysql.connector.connect(host='localhost',
 mycursor = db.cursor()
 
 start = "USE ***;" # Use your database
-sql = "INSERT INTO ** (column_1, column_2) VALUES (%s, %s)" # Insert the data in the database via python
+sql = "INSERT INTO db_name (column_1, column_2) VALUES (%s, %s)" # Insert the data in the database via python
 val = [
   ('****', '***'), # Value 1
   ('****', '***'), # Value 2
